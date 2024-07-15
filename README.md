@@ -15,7 +15,7 @@ Your input is different depending on what you'd like to machine-translate:
 
 The output, in any case, will be a TM containing MT translations, added to the project under `tm/auto/mt` (or the path provided in the configuration as the value of key `destination-for-mt-tm`).
 
-The TM containing the translation from DeepL is in `tm/auto/mt/deepl_YYYYMMDD.tmx`. 
+The TM containing the translation from DeepL is in `tm/auto/mt/deepl_YYYYMMDD.tmx`.
 
 ### Project packages
 
@@ -34,7 +34,10 @@ Each team project will be machine-translated online. The MT translations will be
 
 ## Configuration
 
-Tweak configuration file `/media/data/data/company/Apps/omtmt4pe/config.json` as suitable before you drop your files.
+1. Tweak configuration file `config.json` as suitable.
+2. Put it in the **files folder** or inside the `omegat` folder of the project before you drop your files.
+
+Options:
 
 - **`keep-existing-translations`** (false by default): Depending on whether this key is set to `true` or `false`, the output TM containing MT translations will include existing translations from the working TM. 
 - **`destination-for-mt-tm`** (`tm/auto/mt` by default): The TM containing MT translations will be added in this location of the project before re-packing it or committing the file.
