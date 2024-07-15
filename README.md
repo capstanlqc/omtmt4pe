@@ -41,6 +41,7 @@ Tweak configuration file `/media/data/data/company/Apps/omtmt4pe/config.json` as
 
 ## TODO (dev info)
 
+- Log some stats: project, wordcount, language pair, engine, expense, etc. 
 - Segments for which there is a translation should not be sent to the MT engine if `keep-existing-translations` is set to `true`
 - Fine tune the script to translate only segments that don't have a translation coming from...
 	* project_save.tmx?
@@ -51,7 +52,6 @@ Tweak configuration file `/media/data/data/company/Apps/omtmt4pe/config.json` as
 - Add Google Translate, etc. for languages that DeepL does not support (in a list, from higher to lower preference)
 - Add quality estimation (WIP)
 - Use `destination-for-mt-tm` value (instead of hard-coded `tm/auto/mt`)
-- Log some stats: wordcount, language pair, engine, expense, etc. 
 - Read config file `mt_config.json` or `mt_config.xlsx` from `project_root/omegat` (if found, ignore the one in the files folder)
 - Add user options to config, e.g. user options (form of address, etc.)
 - Tweak the groovy script to include such options, glossaries, etc.
