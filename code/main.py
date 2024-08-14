@@ -5,6 +5,7 @@ from mt.deepl import get_deepl_translations
 from mt.google import get_google_langtags, get_google_translations
 from mt.modernmt import get_mmt_translations
 from utils.omegat import get_segments
+from utils.qe_client import add_scores
 from utils.tmx import compose_tmx, save_tmx_file
 
 # run as:
@@ -78,6 +79,7 @@ match mt_engine.lower():
 
 # sys.exit()
 # todo: post usage to mt-usage
+print("------------------")
 
 try:
     if usage > 0:
@@ -86,7 +88,11 @@ try:
             "target_lang": target_lang,
             "creationtool": "omtpt4pe",
         }
-        print(f"{info}")
+
+        output = add_scores(bitexts)
+        model_output_system_score = output["model_output_system_score"]
+        bitexts = output["data"]
+
         tmx_str = compose_tmx(info, bitexts)
         save_tmx_file(tmx_str, omtprj_dpath, mt_engine.lower())
 
