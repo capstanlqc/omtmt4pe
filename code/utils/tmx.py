@@ -28,7 +28,12 @@ def compose_tmx(info, data):
     body = etree.SubElement(root, "body")
 
     # Iterate over the dictionary and create translation units
-    for source_text, target_text in data.items():
+    # for source_text, target_text in data.items():
+    for unit in data:
+        source_text = unit["src"]
+        target_text = unit["mt"]
+        score = unit["score"]
+
         tu = etree.SubElement(body, "tu")
 
         # Add source language segment
@@ -44,6 +49,10 @@ def compose_tmx(info, data):
         tuv_target.set("{http://www.w3.org/XML/1998/namespace}lang", target_lang)
         seg_target = etree.SubElement(tuv_target, "seg")
         seg_target.text = target_text
+
+        # note with score
+        note = etree.SubElement(tu, "note")
+        note.text = str(score)
 
     # Convert the XML to a string
     tmx_str = etree.tostring(
