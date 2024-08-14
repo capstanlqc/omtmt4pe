@@ -1,0 +1,16 @@
+home=$HOME
+jrebin_fpath="/usr/bin/java"
+omegat_jpath="/opt/omegat/OmegaT_5.7.2_Linux_64/OmegaT.jar"
+config_dpath="$HOME/.omegat"
+# script_fpath="/media/data/data/company/cApStAn_Tech/20_Automation/Scripts/omtmt4pe/mt_deepl_api.groovy"
+script_fpath="$config_dpath/scripts/write_source2file.groovy"
+files_dpath="/media/data/data/company/Apps/omtmt4pe"
+# files_dpath="$HOME/Sync/Dev/omtmt4pe/files"
+# files_dpath="/run/media/souto/257-FLASH/nlp_dev/files/omtprjs"
+tmpl_dpath="/run/media/souto/257-FLASH/nlp_dev/files/template"
+
+COMET_API_KEY="f00b4r"
+MODERNMT_API_KEY="f00b4r"
+ANOTHER_KEY="FOOBAR"
+GOOGLE_APPLICATION_CREDENTIALS=""
+DEEPL_API_KEY="f00b4r"

@@ -1,4 +1,6 @@
-# Machine translation
+# OMTMT4PE
+
+This app's name stands for something like "machine translation for post-editing in OmegaT".
 
 This is a service that runs in Ur for internal consumption of the cApStAn team. This is a proof of concept, and a web service can be created to allow partners to send requests to this service from outside Ur.
 

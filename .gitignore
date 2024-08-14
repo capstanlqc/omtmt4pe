@@ -1,1 +1,8 @@
 venv
+.env
+*.pyc
+**/__pycache__
+config/capps-translation-api-1bd7868e82db.json
+**/capps-translation-api-1bd7868e82db.json
+files/*
+offline/*
