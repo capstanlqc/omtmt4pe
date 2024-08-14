@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # load environment variables
-export $(grep -v '^#' .env | xargs)
+# export $(grep -v '^#' .env | xargs)
+set -a && source $app_root/.env && set +a
 
 app_root=$(pwd)
 mkdir -p $files_dpath/done
@@ -121,6 +122,10 @@ do
     echo "mt"
     $jrebin_fpath -jar $omegat_jpath $app_root/offline/${omtprj_dpath}_OMT --mode=console-translate --config-dir=$config_dpath  --script=$script_fpath
 
+    echo "word counts"
+    remaining=$(jq -r '.["remaining"]["characters"]' $app_root/offline/${omtprj_dpath}_OMT/omegat/project_stats.json)
+    echo "send remaining, project, languages, date, etc. to the mt-usage API"
+
     sleep 5
 	find $app_root/offline/${omtprj_dpath}_OMT/tm/auto/mt -name "deepl_*.tmx.bak" -exec rm {} \;
 
@@ -135,7 +140,7 @@ do
     pushed=$(git push)
     cd -
 
-    echo "if push went okay, remove url from Files/repos.txt and addd ti Files/done/repos.txt"
+    echo "if push went okay, remove url from Files/repos.txt and add ti Files/done/repos.txt"
     touch $files_dpath/done/repos.txt
     echo "echo $repo >> $files_dpath/done/repos.txt"
     echo $repo >> $files_dpath/done/repos.txt

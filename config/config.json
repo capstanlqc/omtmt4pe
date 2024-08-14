@@ -1,0 +1,6 @@
+{ 
+    "source_lang": "en",
+    "target_langs": ["es", "fr", "pt", "ro", "de", "pl"],
+    "mt_providers": ["DeepL", "Google", "ModernMT"],
+    "input_is_template": true
+}
