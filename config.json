@@ -1,4 +1,5 @@
 {
     "keep-existing-translations": false,
-    "destination-for-mt-tm": "tm/auto/mt"
+    "destination-for-mt-tm": "tm/auto/mt",
+    "comet_api_url": "http: //127.0.0.1:8000/api/scores"
 }

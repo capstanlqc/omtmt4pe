@@ -66,3 +66,37 @@ Options:
 A `.env` file in the app root must contain valid paths to all parameters. Copy `.env-ur` to `.env` for convenience.
 
 Script `/path/to/run.sh` is scheduled to run every minute.
+
+
+--- 
+
+### TODO:
+
+- put config.json inside omegat package(s), or next to it in template, or in omtpkgs
+if found inside the project, it takes precedence over the one found next to packages
+
+
+-- DIferent ways to run the thing:
+- from an XX omegat project template -> instances for all languages specified in config
+- from one or more omegat project packages (instances)
+- frmo a team project template (todo?)
+- from a list of git-hosted team projects (repos.txt)
+
+-> 
+create offline projects (folders) that omegat can interact with
+
+-> output: 
+- if packages -> output packages moved to done
+- if team projects -> commit files and add url to done/repos.txt
+
+config:
+
+- modules: 
+-- mt: providers
+-- qe: true, models...
+
+TIps.
+
+add region subtag
+(for mt it's easier to remove it than to add it)
+- 
