@@ -95,8 +95,6 @@ config:
 -- mt: providers
 -- qe: true, models...
 
-TIps.
+Tips:
 
-add region subtag
-(for mt it's easier to remove it than to add it)
-- 
+- add region subtag (for mt it's easier to remove it than to add it)
