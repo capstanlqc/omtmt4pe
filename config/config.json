@@ -2,5 +2,15 @@
     "source_lang": "en",
     "target_langs": ["es", "fr", "pt", "ro", "de", "pl"],
     "mt_providers": ["DeepL", "Google", "ModernMT"],
-    "input_is_template": true
+    "input_is_omtpkg_template": true,
+    "quality_estimation": {
+        "thresholds": {
+            "de": 0.86,
+            "es": 0.88,
+            "fr": 0.879,
+            "ro": 0.901,
+            "pl": 0.87,
+            "pt": 0.84
+        }
+    }
 }
